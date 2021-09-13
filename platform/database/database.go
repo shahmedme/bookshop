@@ -24,6 +24,8 @@ func InitDatabase() {
 	var err error
 	var config string = fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=disable", dbHost, dbUser, dbPassword, dbName, dbPort)
 
+	fmt.Println(config)
+
 	DB, err = gorm.Open(postgres.Open(config), &gorm.Config{
 		// Logger: logger.Default.LogMode(logger.Info),
 	})
